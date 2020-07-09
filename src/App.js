@@ -1,4 +1,5 @@
 import React, {  } from 'react';
+import Film from "./Film"
 
 
 
@@ -27,7 +28,8 @@ class App extends React.Component {
       <div>
         Hello {this.state.name}
         <p>languages: {this.state.languages[0]}</p>
-        <p>And finally: {this.state.data.info}</p>
+        <p>And finally: </p>
+        {this.state.data.map(film => <Film info = {film}/> )}
       </div>
     );
   }
